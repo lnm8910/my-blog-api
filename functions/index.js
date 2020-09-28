@@ -7,8 +7,7 @@ const app = express();
 app.use(cors({ origin: true }));
 
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://fir-api-9a206..firebaseio.com"
+    credential: admin.credential.cert(serviceAccount)
 });
 const db = admin.firestore();
 
