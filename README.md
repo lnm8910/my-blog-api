@@ -11,11 +11,11 @@ Proof of concept of an api built on Node JS and deployed on Firebase.
 
 4. npm install -g firebase-tools
 
-5. Create your directory: mkdir my-blog-api
+5. Create your directory: `mkdir my-blog-api` and 
 
 6. `firebase login --no-localhost`
 
-7. `firebase init`
+7. Run `firebase init` to initialize the firebase project
 
 8. `cd functions`
 
@@ -23,8 +23,34 @@ Proof of concept of an api built on Node JS and deployed on Firebase.
 
 10. `npm i cors`
 
+11. run `firebase deploy` to deploy the app to firebase
+
+### Running Application
 Run the below command to start the application.
 
 `npm run serve`
 
-http://localhost:5000/fir-api-9a206/us-central1/app/create
+### API Reference: 
+#### Create
+POST http://localhost:5001/fir-api-c098e/us-east1/app/api/create
+
+Payload: 
+`{
+"id": 1,
+"item": "Item Name"
+}`
+
+#### Get All
+GET http://localhost:5001/fir-api-c098e/us-east1/app/api/read
+
+#### Update
+PUT http://localhost:5001/fir-api-c098e/us-east1/app/api/update/1
+
+Payload:
+`{
+"id": 1,
+"item": "Modified Item Name"
+}`
+
+#### Delete
+DELETE http://localhost:5001/fir-api-c098e/us-east1/app/api/delete/1
